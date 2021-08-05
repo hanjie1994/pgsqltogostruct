@@ -1,7 +1,6 @@
 package gormtogo
 
 import (
-
 	"fmt"
 	"strings"
 
@@ -33,7 +32,7 @@ func AddGormTag(column *findSql.Column) string {
 		tag += fmt.Sprintf(";type:%s", column.ColumnType)
 	}
 	if column.Comment != "" {
-		tag += fmt.Sprintf(";commnet:'%s'", column.Comment)
+		tag += fmt.Sprintf(";comment:'%s'", column.Comment)
 	}
 	end := fmt.Sprintf("\"`")
 	return tag + end
